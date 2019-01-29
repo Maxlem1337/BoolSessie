@@ -11,7 +11,7 @@ the interface of one class into an interface expected by the clients.
 Wrap some objects to make their interfaces look like something they’re not. 
 Why would we do that? So we can adapt a design expecting one interface to a class that implements a different interface.
 
-The story of this implementation is this.
+## Exercise
 
 Pirates are coming! we need a `RowingBoat` to flee! 
 We have a `FishingBoat` and our captain. We have no time to make up a new ship! We need to reuse this `FishingBoat`. 
