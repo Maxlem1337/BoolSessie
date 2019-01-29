@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/adapterFacade.iml" filepath="$PROJECT_DIR$/.idea/modules/adapterFacade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/adapterFacade_main.iml" filepath="$PROJECT_DIR$/.idea/modules/adapterFacade_main.iml" group="adapterFacade" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/adapterFacade_test.iml" filepath="$PROJECT_DIR$/.idea/modules/adapterFacade_test.iml" group="adapterFacade" />
+    </modules>
+  </component>
+</project>
