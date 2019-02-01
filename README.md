@@ -46,10 +46,10 @@ The goldmine employs 4 different kind of dwarven mine workers. (DwarvenCartOpera
 
 Each kind of worker executes a specific action in the goldmine.
 
-So high level a day at the mine looks like this for a dwarf:
-* wake up and go to the mine
+So high level a day looks like this for a goldmine:
+* start new day
 * dig out gold
-* go home and go to sleep
+* end day
 
 Depending on the type of dwarf you have to perform other actions in the mine.
 

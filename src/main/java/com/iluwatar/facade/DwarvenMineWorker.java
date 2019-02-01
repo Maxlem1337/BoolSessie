@@ -22,60 +22,54 @@
  */
 package com.iluwatar.facade;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.Arrays;
+import java.util.List;
+
+import static java.util.stream.Collectors.toList;
 
 
 public abstract class DwarvenMineWorker {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(DwarvenMineWorker.class);
-
-  private void goToSleep() {
-    LOGGER.info("{} goes to sleep.", name());
+  private String goToSleep() {
+    return String.format("%s goes to sleep", name());
   }
 
-  private void wakeUp() {
-    LOGGER.info("{} wakes up.", name());
+  private String wakeUp() {
+    return String.format("%s wakes up", name());
   }
 
-  private void goHome() {
-    LOGGER.info("{} goes home.", name());
+  private String goHome() {
+    return String.format("%s goes home", name());
   }
 
-  private void goToMine() {
-    LOGGER.info("{} goes to the mine.", name());
+  private String goToMine() {
+    return String.format("%s goes to mine", name());
   }
 
-  private void performAction(Action action) {
+  private String performAction(Action action) {
     switch (action) {
       case GO_TO_SLEEP:
-        goToSleep();
-        break;
+        return goToSleep();
       case WAKE_UP:
-        wakeUp();
-        break;
+        return wakeUp();
       case GO_HOME:
-        goHome();
-        break;
+        return goHome();
       case GO_TO_MINE:
-        goToMine();
-        break;
+        return goToMine();
       case WORK:
-        work();
-        break;
+        return work();
       default:
-        LOGGER.info("Undefined action");
-        break;
+        throw new IllegalArgumentException("Dwarf exploded");
     }
   }
 
-  void performAction(Action... actions) {
-    for (Action action : actions) {
-      performAction(action);
-    }
+  List<String> performAction(Action... actions) {
+    return Arrays.stream(actions)
+            .map(this::performAction)
+            .collect(toList());
   }
 
-  public abstract void work();
+  public abstract String work();
 
   public abstract String name();
 }

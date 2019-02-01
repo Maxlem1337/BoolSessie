@@ -22,17 +22,11 @@
  */
 package com.iluwatar.facade;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-
 public class DwarvenGoldDigger extends DwarvenMineWorker {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(DwarvenGoldDigger.class);
-
   @Override
-  public void work() {
-    LOGGER.info("{} digs for gold.", name());
+  public String work() {
+    return String.format("%s digs for gold", name());
   }
 
   @Override
